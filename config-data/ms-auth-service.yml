@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:${SERVERS_PORT:0}}
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update  # Esto puede ser 'create', 'validate', etc., dependiendo de tu necesidad
+    show-sql: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ms_auth  # URL de conexión a MySQL
+    username: root  # Cambia esto por el nombre de usuario de tu base de datos MySQL
+    password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+jwt:
+  secret: secret
