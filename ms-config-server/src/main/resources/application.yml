@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kennyaapro23/DAD-ventas.git # ruta del repositorio git
+          uri:  https://github.com/Christian021Lh/tarea02.git # ruta del repositorio git
           searchPaths: config-data
           default-label: main
   security:
